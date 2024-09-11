@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Sultan Khan - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+        /* Full Page Section */
+        .section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+        }
+        /* About Section (Top) */
+        .about-section {
+            background-image: url('image-3.jpg'); /* First background image */
+        }
+        /* Projects Section (Scroll down to this) */
+        .projects-section {
+            background-image: url('image-4.jpg'); /* Second background image */
+            padding: 20px;
+        }
+        /* Container for content */
+        .container {
+            width: 60%;
+            max-width: 1000px;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            border-radius: 8px;
+            padding: 20px;
+        }
+        /* About Section Content */
+        .about-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* This centers the image and text */
+            margin-bottom: 15px;
+       }
+
+       .profile-image {
+           border-radius: 100%;
+           width: 130px;
+           height: 130px;
+           margin-bottom: 10px; /* Adjusts spacing between the image and text */
+      }
+
+        .about .title {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .about .content {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: left;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #ddd;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Arrow for scrolling down */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 45px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .scroll-indicator .arrow {
+            display: block;
+            margin-top: 5px;
+            font-size: 2em;
+            color: #fff;
+        }
+        /* Projects Section Content */
+        .projects .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .projects .project-list {
+            margin-top: 20px;
+        }
+        .projects .project {
+            margin-bottom: 15px;
+        }
+        .projects .project-title {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #3498db;
+        }
+        .projects .project-title a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .projects .project-title a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- About Section (Top Section) -->
+    <div class="section about-section">
+        <div class="container">
+            <div class="about-header">
+                <!-- Profile Picture -->
+                <img src="myimage.jpeg" alt="Profile Picture of Aryan Sultan Khan" class="profile-image">
+                <div class="title">Aryan Sultan Khan</div>
+            </div>
+            <div class="content">
+                <p> Hello, I have a Master’s degree in Business Analytics and a Bachelor’s degree in                                             Economics & Management. With a passion for data analysis, statistical modeling and predictive analytics, I enjoy using data to uncover patterns and trends and make useful forecasts.</p>
+
+                <p>If you'd like to collaborate or learn more about my work, feel free to reach out using the contact information below.</p>
+            </div>
+            <div class="footer">
+              <p><strong>Download my resume:</strong> <a href="ARYAN-SULTAN-KHAN-RESUME-1.pdf"download>Click here to download</a></p>
+                <p>Contact me at: <a href="mailto:ariansultan94@gmail.com">ariansultan94@gmail.com</a></p>
+                <p>Find me on <a href="https://www.linkedin.com/in/aryan-sultan-khan-a0a664235/" target="_blank">LinkedIn</a></p>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            Scroll Down
+            <span class="arrow">&#x2193;</span>
+        </div>
+    </div>
+
+    <!-- Projects Section (Scroll down to this section) -->
+    <div class="section projects-section">
+        <div class="container">
+            <div class="title">Projects</div>
+            <div class="project-list">
+                <!-- Project 1: Retail Forecasting -->
+                <div class="project">
+                    <div class="project-title"><a href="https://ask185.github.io/RetailForecasting_Project/" target="_blank">Project 1: Retail Forecasting</a></div>
+                    <p>Led the development of economic forecasts for the monthly turnover of the pharmaceutical, cosmetic, and toiletry goods industry in NSW using advanced statistical techniques in R. Applied Exponential Smoothing State Space Models (ETS) and ARIMA to generate forecasts, achieving an optimal balance between model complexity and predictive accuracy.</p>
+                </div>
+                <!-- Project 2: Stroke Simulation -->
+                <div class="project">
+                    <div class="project-title"><a href="https://aryan-sultan-1120.shinyapps.io/App_for_stroke_simulation/" target="_blank">Project 2: Stroke Simulation Model</a></div>
+                    <p>Developed a discrete event simulation model to optimise bed allocation and utilisation in the stroke unit, showing that increasing beds from 7 to 11 reduced patient wait times. Created a Shiny web application to visualise patient load and bed capacity, providing insights for stakeholders.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

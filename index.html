@@ -1,160 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+  <html lang="en">
+    <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryan Sultan Khan - Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            color: #fff;
-        }
-        /* Full Page Section */
-        .section {
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            flex-direction: column; /* Ensures content is centered vertically in a column layout */
-            justify-content: center;
-            align-items: center;
-            background-size: cover;
-            background-position: center;
-          
-        }
-        /* About Section (Top) */
-        .about-section {
-              background-image: url('image-3.jpg'); /* First background image */
-              display: flex;
-              align-items: center;
-              justify-content: center;
-        }
-        /* Projects Section (Scroll down to this) */
-        .projects-section {
-            background-image: url('image-4.jpg'); /* Second background image */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        /* Container for content */
-        .container {
-            width: 60%;
-            max-width: 1000px;
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-            border-radius: 8px;
-            padding: 20px;
-        }
-        /* About Section Content */
-        .about-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* This centers the image and text */
-            margin-bottom: 15px;
-       }
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aryan Sultan Khan - Portfolio</title>
+        <style>
+        
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e90ff, #27ae60);; /* Light-to-dark blue gradient */
+    color: #fff;
+    scroll-behavior: smooth;
+}
 
-       .profile-image {
+      
+      /* Navbar */
+        header {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          padding: 10px 20px;
+          z-index: 1000;
+        }
+      
+      header nav {
+        display: flex;
+        justify-content: center;
+      }
+      
+      header nav a {
+        margin: 0 15px;
+        color: #fff;
+          text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+      
+      header nav a:hover {
+        color: #3498db;
+      }
+      
+      /* Hero Section */
+        .hero {
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url('hero-background.jpg') center/cover no-repeat;
+          text-align: center;
+        }
+      
+      .hero h1 {
+        font-size: 2em;
+        margin-bottom: 5px;
+      }
+      
+      .hero p {
+        font-size: 1em;
+        margin-bottom: 15px;
+        max-width: 550px;
+      }
+      
+      .hero .btn {
+        display: inline-block;
+        margin: 8px;
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #fff;
+          background-color: #3498db;
+          text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .hero .btn:hover {
+        background-color: #1a99e8;
+      }
+      .profile-image {
            border-radius: 100%;
            width: 130px;
            height: 130px;
            margin-bottom: 10px; /* Adjusts spacing between the image and text */
       }
+      
+      /* About Section */
+      .about-content {
+        display: flex;
+        align-items: center; /* Vertically align text and image */
+        justify-content: space-between; /* Space between text and image */
+        gap: 10px; /* Add some spacing between text and image */
+      }
 
-        .about .title {
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-        .about .content {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-        .footer {
-            text-align: left;
-            margin-top: 15px;
-            font-size: 0.9em;
-            color: #ddd;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+      .about-text {
+        flex: 1; /* Text takes up 50% of the section width */
+        text-align: left; /* Align text to the left */
+      }
 
-        /* Projects Section Content */
-        .projects .title {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .projects .project-list {
-            margin-top: 20px;
-        }
-        .projects .project {
-            margin-bottom: 15px;
-        }
-        .projects .project-title {
-            font-weight: bold;
-            font-size: 1.3em;
-            color: #3498db;
-        }
-        .projects .project-title a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .projects .project-title a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
+      .about-image {
+        flex: 1; /* Image takes up 50% of the section width */
+        display: flex;
+        justify-content: center; /* Center the image horizontally */
+        align-items: center; /* Center the image vertically */
+      }
+      .about-image img {
+        max-width: 112%; /* Ensure the image scales appropriately */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Optional: Add rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+      }
 
-    <!-- About Section (Top Section) -->
-    <div class="section about-section">
-        <div class="container">
-            <div class="about-header">
-                <!-- Profile Picture -->
-                <img src="myimage.jpeg" alt="Profile Picture of Aryan Sultan Khan" class="profile-image">
-                <div class="title">Aryan Sultan Khan</div>
-            </div>
-            <div class="content">
-                <p> Hello, I am Aryan. With an academic background in economics and data analytics, I specialise in statistical modeling and predictive analytics. I enjoy exploring data to uncover patterns and underlying trends to make useful forecasts. Additionally, I host a podcast focused on forecasting science and 
-its application in industry and academia at <a href="https://www.buzzsprout.com/1641538"> Forecasting Impact</a> – International Institute of Forecasters. I also infrequently write blog posts that can be found <a href="https://ads0094.github.io/Blogs/">here </a>. </p>
+/* Responsive Design */
+      @media (max-width: 768px) {
+        .about-content {
+          flex-direction: column; /* Stack text and image vertically on smaller screens */
+      }
 
-                <p>If you'd like to collaborate or learn more about my work, feel free to reach out using the contact information below.</p>
-            </div>
-            <div class="footer">
-              <p><strong>Download my resume:</strong> <a href="ARYAN-SULTAN-KHAN-RESUME.pdf"download>Click here to download</a></p>
-                <p>Contact me at: <a href="mailto:ariansultan94@gmail.com">ariansultan94@gmail.com</a></p>
-                <p>Find me on <a href="https://www.linkedin.com/in/aryan-sultan-khan-a0a664235/" target="_blank">LinkedIn</a></p>
-            </div>
-        </div>
-
-
+    .about-image {
+        margin-top: 15px; /* Add spacing above the image when stacked */
+    }
+    .about-image figcaption {
+    margin-top: 8px; /* Add some space between the image and the caption */
+    font-size: 0.9em; /* Slightly smaller font for the caption */
+    color: #ddd; /* Light grey text for the caption */
+    text-align: center;
+}
+      }
+/* Section Styles */
+        .section {
+          padding: 60px 20px;
+          text-align: center;
+        }
+      
+      .section-title {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+      }
+      
+      .section-content {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1em;
+        line-height: 1.4;
+      }
+      
+      .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .project-card {
+        background-color: #333;
+          margin: 15px;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 300px;
+        text-align: left;
+        transition: transform 0.3s ease;
+      }
+      
+      .project-card:hover {
+        transform: translateY(-10px);
+      }
+      
+      .project-card a {
+        color: #3498db;
+          font-weight: bold;
+        text-decoration: none;
+      }
+      
+      .project-card a:hover {
+        text-decoration: underline;
+      }
+      
+      footer {
+        padding: 20px;
+        background-color: #000;
+          text-align: center;
+        color: #ddd;
+      }
+      
+      footer a {
+        color: #3498db;
+          text-decoration: none;
+      }
+      
+      footer a:hover {
+        text-decoration: underline;
+      }
+      </style>
+        </head>
+        <body>
+        
+        <!-- Navbar -->
+        <header>
+        <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        </nav>
+        </header>
+        
+        <!-- Hero Section -->
+        <div class="hero">
+          <img src="my-image.jpeg" alt="Profile Picture of Aryan Sultan Khan" class="profile-image">
+        <h1>Aryan Sultan Khan</h1>
+        <p>Specialising in statistical modeling, predictive analytics, and data-driven insights. Let's collaborate to turn data into actionable forecasts!</p>
+        <a href="#about" class="btn">Learn More</a>
+        <a href="#contact" class="btn">Contact Me</a>
     </div>
 
-    <!-- Projects Section (Scroll down to this section) -->
-<div class="section projects-section">
-    <div class="container">
-        <div class="title">Projects</div>
-        <!-- Adding GitHub profile links -->
-        <div class="github-profiles">
-            <p>Check out my GitHub profiles for more projects and contributions:<a href="https://github.com/ask185" target="_blank">GitHub</a> (university projects) <a href="https://github.com/ads0094/" target="_blank">GitHub</a> (personal)</p>
+<!-- About Section -->
+<section id="about" class="section about-section">
+    <div class="about-content">
+        <!-- Left Side: Text -->
+        <div class="about-text">
+            <h2 class="section-title">About Me</h2>
+            <p>I have a Bachelor’s degree in Economics and Management from the University of London and a Master’s degree in Business Analytics from Monash University. Over the years, I’ve focused on using tools like R, Python, Excel, and Power BI to work with data, uncover trends, and make sense of complex information. My experience includes building statistical models and creating forecasts that are both practical and easy to understand.</p>
+
+            <p>I believe the true value of data lies in how it’s communicated, so I always aim to present insights in the simplest and clearest way possible. I’m particularly interested in statistical forecasting and enjoy exploring patterns in data to help solve real-world problems.</p>
+
+            <p>I host the <a href="https://www.buzzsprout.com/1641538" target="_blank">Forecasting Impact Podcast</a>, exploring forecasting applications across industry and academia. I also infrequently write blog posts that can be found <a href="https://ads0094.github.io/Blogs/">here</a>.</p>
         </div>
-        <div class="project-list">
-            <!-- Project 1: Retail Forecasting -->
-            <div class="project">
-                <div class="project-title"><a href="https://ask185.github.io/RetailForecasting_Project/" target="_blank">Project 1: Retail Forecasting</a></div>
-                <p>Led the development of economic forecasts for the monthly turnover of the pharmaceutical, cosmetic, and toiletry goods industry in NSW using advanced statistical techniques in R. Applied Exponential Smoothing State Space Models (ETS) and ARIMA to generate forecasts, achieving an optimal balance between model complexity and predictive accuracy.</p>
-            </div>
-            <!-- Project 2: Stroke Simulation -->
-            <div class="project">
-                <div class="project-title"><a href="https://aryan-sultan-1120.shinyapps.io/App_for_stroke_simulation/" target="_blank">Project 2: Stroke Simulation Model</a></div>
-                <p>Developed a discrete event simulation model to optimise bed allocation and utilisation in the stroke unit. Created a Shiny web application to visualise patient load and bed capacity, providing insights for stakeholders.</p>
-            </div>
+
+        <!-- Right Side: Image with Caption -->
+        <div class="about-image">
+            <figure>
+                <img src="monash.jpg" alt="Monash Campus Image" />
+                <figcaption>Monash University Clayton Campus in the Fall 2023</figcaption>
+            </figure>
         </div>
     </div>
-</div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3><a href="https://ask185.github.io/RetailForecasting_Project/" target="_blank">Retail Forecasting</a></h3>
+                <p>Developed monthly turnover forecasts for pharmaceutical industries using ETS and ARIMA models in R.</p>
+            </div>
+            <div class="project-card">
+                <h3><a href="https://aryan-sultan-1120.shinyapps.io/App_for_stroke_simulation/" target="_blank">Stroke Simulation Model</a></h3>
+                <p>Created a Shiny app to optimise bed allocation in stroke units through discrete event simulation modeling.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact</h2>
+        <div class="section-content">
+            <p>Email: <a href="mailto:ariansultan94@gmail.com">ariansultan94@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/aryan-sultan-khan-a0a664235/" target="_blank">Connect with me</a></p>
+            <p>Resume: <a href="ARYAN-SULTAN-KHAN-RESUME.pdf" download>Download Here</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Aryan Sultan Khan</p>
+    </footer>
+</body>
+</html>
 
 
